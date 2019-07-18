@@ -29,17 +29,18 @@
 		</dependency>
 	
 	</dependencies>
-	<distributionManagement>
-		 <snapshotRepository>
-		    <id>nexus</id>
-		    <url>http://172.30.76.32:8081/repository/maven-snapshots/</url>
-		 </snapshotRepository>
-		
-		<repository>
-		    <id>nexus</id>
-		    <url>http://172.30.76.32:8081/repository/maven-releases/</url>
-		</repository>
-  	</distributionManagement>
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>plugins-releases</name>
+        <url>http://172.30.76.32:8081/artifactory/plugins-release-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>plugins-snapshot</name>
+        <url>http://172.30.76.32:8081/artifactory/plugins-snapshot-local</url>
+     </snapshotRepository>
+    </distributionManagement>
 	
 <build>
     <plugins>
